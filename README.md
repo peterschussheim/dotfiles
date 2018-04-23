@@ -13,6 +13,7 @@ THANK YOU GREG HURRELL!!!
 
 ## TODO
 
+* [ ] figure out why submodules are NOT showing locallay and in github remote
 * [ ] update files ending with `.encrypted` to hold my own encrypted data
   * [ ] .npmrc
   * [ ] .snippets
