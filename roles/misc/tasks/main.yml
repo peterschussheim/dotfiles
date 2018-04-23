@@ -1,0 +1,25 @@
+---
+- name: misc | ensure directories exist
+  file: path={{ item }} state=directory
+  with_items:
+    - ~/Archives
+    - ~/Local
+    - ~/buck-cache
+
+- name: misc | touch ~/mbox
+  file: path=~/mbox state=touch
+
+- name: misc | hide items
+  command: chflags hidden {{ item }}
+  with_items:
+    - ~/buck-cache
+    - ~/mbox
+
+- name: misc | install prefnerd
+  gem: name=prefnerd user_install=yes
+
+# Note: Won't work without Node (which means homebrew role has to have run
+# first, but I don't want to declare an explicit, heavyweight dependency in this
+# role).
+- name: misc | install source-map-explorer
+  npm: name=source-map-explorer global=yes

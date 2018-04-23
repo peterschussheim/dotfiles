@@ -1,0 +1,48 @@
+%include ~/.hgrc.local
+
+[alias]
+# muscle memory
+clean = purge
+
+# garbage collect commits that aren't reachable from bookmarks
+cleanup = strip -r "all() - ::bookmark()"
+
+# braindeadness
+man = help
+
+# muscle memory
+show = ex
+
+turds = !find . -name '*.orig' -exec rm -i {} \;
+
+whatchanged = log --stat -f
+
+[experimental]
+evolution=all
+
+# http://mercurial.selenic.com/wiki/PagerExtension
+[pager]
+# commands which should use a pager
+
+# default is:
+#   annotate, cat, diff, export, grep, heads, help, incoming, locate, log, outgoing, parents, sl, smartlog, status, tags, tip
+# we add:
+#   man
+#   shelve
+#   show (also affects `ex`; oddly, adding `ex` does not affect `show`)
+#   whatchanged
+attend = annotate, cat, diff, export, grep, heads, help, incoming, locate, log, outgoing, parents, shelve, sl, smartlog, status, tags, tip, man, show, whatchanged
+
+[revsetalias]
+# Commits on the named topic branch; eg. topic(foobar)
+topic($1) = only(bookmark($1))
+
+# Commits not reachable from bookmarks.
+unreachable = all() - ::bookmark()
+
+# Merge base of current rev and master.
+base = ancestor(master, .)
+
+[ui]
+merge = internal:merge3
+username = Greg Hurrell <glh@fb.com>

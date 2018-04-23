@@ -1,0 +1,139 @@
+# {{ ansible_managed }}
+
+[alias]
+	abbrev = !sh -c 'git rev-parse --short ${1-`echo HEAD`}' -
+	ack = grep --break --heading
+	amend = commit --amend -v
+	both = diff HEAD
+	br = branch
+	ci = commit -v
+	co = checkout
+	count = !sh -c 'git log --oneline | wc -l'
+
+	# http://stackoverflow.com/questions/224687/git-find-duplicate-blobs-files-in-this-tree/8408640#8408640
+	dupes = !"git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
+
+	fixup = !sh -c 'git commit --fixup=$1 ${@:2}' -
+
+	# equivalent to: graph --all
+	gr = log --graph --all --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+	# requires Git 1.6.3 or later; %C(auto) requires Git 1.8.3 or later
+	graph = log --graph --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+	no-edit = commit --amend --no-edit
+
+	# %C(auto) requires Git 1.8.3 or later
+	one = log --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+	oneline = log --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+	# requires Git 1.5.4 or later
+	p = add -p
+	patch = add -p
+
+	# requires Git 1.7.11.3 or later
+	reword = commit --amend --only -v --
+
+	# requires Git 1.6.2 or later
+	rollback = !sh -c 'git reset --merge HEAD~${1-1}' -
+
+	# "smartlog", although it's not that smart.
+	# Equivalent to `git graph --all --simplify-by-decoration.
+	sl = log --graph --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset' --all --simplify-by-decoration
+
+	st = status
+	staged = diff --cached
+
+	# %C(auto) requires Git 1.8.3 or later
+	ten = log -10 --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+	# compensate for brain damage caused by using Mercurial
+	up = checkout
+
+[branch]
+	autosetupmerge = always
+	autosetuprebase = local
+
+[branch "master"]
+	rebase = true
+
+[color]
+	ui = auto
+
+[color "diff-highlight"]
+	oldHighlight = red bold 238
+	newHighlight = green bold 238
+
+[color "interactive"]
+	prompt = blue reverse
+
+[color "status"]
+	untracked = blue
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = sh -c "~/.zsh/bin/diff-highlight | less -iFMRSX" -
+	attributesfile = ~/.gitattributes
+
+# ignored by Git older than 1.8.2
+[diff]
+	algorithm = histogram
+
+	# Added in Git 2.9.0 (experimental): more readable diffs.
+	compactionHeuristic = true
+
+[difftool]
+	prompt = false
+
+[grep]
+	lineNumber = true
+
+	# requires Git built with PCRE support; ie:
+	#   brew install git --with-pcre (on OS X)
+	patternType = perl
+
+[help]
+	autocorrect = 2
+
+[interactive]
+	diffFilter = diff-highlight
+
+[log]
+	decorate = short
+
+[merge]
+	conflictStyle = diff3
+	log = 1000
+
+[pager]
+	show-branch = true
+	status = true
+
+[push]
+	# Added in Git 1.7.11, default in 2.0, but still required (to avoid warning).
+	default = simple
+
+[rebase]
+	autosquash = true
+
+[rerere]
+	enabled = true
+
+[status]
+	submodulesummary = true
+
+[submodule]
+	# Added in Git 2.9.0.
+	fetchJobs = 4
+
+[user]
+{% if git_user_email != '' %}
+	email = {{ git_user_email }}
+{% endif %}
+{% if git_user_name != '' %}
+	name = {{ git_user_name }}
+{% endif %}
+
+# ignored by Git older than 1.7.10
+[include]
+	path = .gitconfig.local

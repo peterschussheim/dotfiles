@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+# Conditionals here are to ensure we only do any work in submodules under
+# roles/dotfiles/files/.vim/pack:
+
+git submodule foreach '
+  if [ "${path##roles/dotfiles/files/.vim/pack/}" != "$path" ]; then
+    BRANCH=$(git config -f $toplevel/.gitmodules submodule."$path".branch || echo master)
+    git checkout $BRANCH
+  fi
+'
+
+git submodule foreach '
+  if [ "${path##roles/dotfiles/files/.vim/pack/}" != "$path" ]; then
+    git pull --recurse-submodules || :
+  fi
+'
+
+git submodule foreach '
+  if [ "${path##roles/dotfiles/files/.vim/pack/}" != "$path" ]; then
+    git submodule update --init --recursive || :
+  fi
+'
+
+# Update help tags.
+(
+  cd ~/.vim/pack
+
+  PACKS=""
+  for PACK in $(find . -type d -maxdepth 3 -path '*/opt/*' | cut -f 4 -d /); do
+    PACKS="${PACKS}packadd! $PACK | "
+  done
+
+  COMMANDS="packloadall | call pathogen#helptags() | quit"
+  echo "Running: vim -u NONE -N -c \"${PACKS}${COMMANDS}\""
+  vim -u NONE -N -c "${PACKS}${COMMANDS}"
+)

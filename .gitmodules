@@ -1,0 +1,158 @@
+[submodule "roles/dotfiles/files/.mutt/mutt-notmuch-py"]
+	path = roles/dotfiles/files/.mutt/vendor/mutt-notmuch-py
+	url = https://github.com/honza/mutt-notmuch-py.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/opt/vim-pathogen"]
+	path = roles/dotfiles/files/.vim/pack/bundle/opt/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/base16-vim"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/command-t"]
+	branch = next
+	ignore = dirty
+	path = roles/dotfiles/files/.vim/pack/bundle/start/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/ferret"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/ferret
+	url = https://github.com/wincent/ferret.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/indentLine"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/loupe"]
+	ignore = dirty
+	path = roles/dotfiles/files/.vim/pack/bundle/start/loupe
+	url = https://github.com/wincent/loupe.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/neco-ghc"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/nerdtree"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/nerdtree/opt/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/pinnacle"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/pinnacle
+	url = https://github.com/wincent/pinnacle.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/replay"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/replay
+	url = https://github.com/wincent/replay.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/scalpel"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/scalpel
+	url = https://github.com/wincent/scalpel.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/tcomment_vim"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/terminus"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/terminus
+	url = https://github.com/wincent/terminus.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/ultisnips"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/undotree"]
+	path = roles/dotfiles/files/.vim/pack/undotree/opt/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-abolish"]
+	path = roles/dotfiles/files/.vim/pack/vim-abolish/opt/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-ansible-yaml"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-clipper"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-clipper
+	url = https://github.com/wincent/vim-clipper.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-docvim"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-docvim
+	url = https://github.com/wincent/vim-docvim.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-easydir"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-easydir
+	url = https://github.com/dockyard/vim-easydir.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-eunuch"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-fugitive"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-git"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-git
+	url = https://github.com/tpope/vim-git.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-javascript"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-json"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-json
+	url = https://github.com/elzr/vim-json.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-jsx"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-lion"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-lion
+	url = https://github.com/tommcdo/vim-lion.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-markdown"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-projectionist"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-repeat"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-signature"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-speeddating"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-surround"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-comment"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-comment
+	url = https://github.com/glts/vim-textobj-comment.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-rubyblock"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-user"]
+	ignore = untracked
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "roles/dotfiles/files/.vim/pack/deoplete/opt/deoplete"]
+	path = roles/dotfiles/files/.vim/pack/deoplete/opt/deoplete
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "roles/dotfiles/files/.zsh/base16-shell"]
+	path = roles/dotfiles/files/.zsh/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git
+[submodule "vendor/ansible"]
+	path = vendor/ansible
+	url = https://github.com/ansible/ansible.git
+[submodule "vendor/base16-iterm2"]
+	path = vendor/base16-iterm2
+	url = https://github.com/chriskempson/base16-iterm2.git
+[submodule "vendor/git-cipher"]
+	path = vendor/git-cipher
+	url = https://github.com/wincent/git-cipher.git
+[submodule "vendor/virtualenv"]
+	path = vendor/virtualenv
+	url = https://github.com/pypa/virtualenv.git
+[submodule "roles/dotfiles/files/.zsh/zsh-autosuggestions"]
+	path = roles/dotfiles/files/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "roles/dotfiles/files/.zsh/zsh-syntax-highlighting"]
+	path = roles/dotfiles/files/.zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-reason-plus"]
+	ignore = dirty
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-reason-plus
+	url = https://github.com/reasonml-editor/vim-reason-plus.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/LanguageClient-neovim"]
+	path = roles/dotfiles/files/.vim/pack/LanguageClient-neovim/opt/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim.git
+[submodule "roles/dotfiles/files/.vim/pack/bundle/start/vim-zsh"]
+	path = roles/dotfiles/files/.vim/pack/bundle/start/vim-zsh
+	url = https://github.com/chrisbra/vim-zsh.git
