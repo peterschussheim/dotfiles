@@ -11,6 +11,13 @@ THANK YOU GREG HURRELL!!!
   * [Adobe Source Code Pro](https://github.com/adobe-fonts/source-code-pro) (Light) font.
   * Vim, running inside tmux, inside iTerm2, on macOS "El Capitan".
 
+## TODO
+
+* [ ] update files ending with `.encrypted` to hold my own encrypted data
+  * [ ] .npmrc
+  * [ ] .snippets
+* [ ] figure out how to include my `GPG` keys, settings, etc
+
 ## Features
 
 ### Dotfiles
