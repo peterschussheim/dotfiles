@@ -58,6 +58,3 @@
 # probably be separate roles.
 - name: dotfiles | create auxiliary directories
   file: path={{ item }} state=directory
-  with_items:
-    # mbsync will die on first sync without this:
-    - ~/.mail
